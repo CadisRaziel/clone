@@ -1,0 +1,28 @@
+para pedir permissão para usar a camera faça o seguinte
+
+aperte ctrl+P 
+e digite "AndroidManifest.xml"
+ele esta na pasta "android/app/src/main"
+
+
+
+A permissão o padrao só vem essa :
+<uses-permission  android:name="android.permission.INTERNET" />   
+
+ai voce tem que adicionar essas duas:
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+para configurar no IOS
+aperte CTRL+P e digite info.plist é o primeiro
+e la voce vai adicionar novas keys abaixo desse codigo <dict>
+
+inclua essas 3 keys:
+<key>NSPhotolibraryUsageDescription</key>
+<string>$(PRODUCT_NAME) would like access to your photo gallery</string>
+<key>NSCameraUsageDescription</key>
+<string>$(PRODUCT_NAME) would like to use your camera</string>
+<key>NSPhotolibraryAddUsageDescription</key>
+<string>$(PRODUCT_NAME) would like to save photos to your photo gallery</string>
+
